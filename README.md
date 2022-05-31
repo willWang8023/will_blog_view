@@ -1,7 +1,7 @@
 # will_blog_view
 
 ## Project setup
-```shell
+```bash
 npm install
 ```
 

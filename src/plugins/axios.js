@@ -1,21 +1,21 @@
 import axios from 'axios';
-// import NProgress from 'nprogress'
-// import 'nprogress/nprogress.css'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 console.log(process.env.NODE_ENV)
 console.log(process.env.VUE_APP_URL)
 console.log(process.env.VUE_APP_NAME)
 
 const request = axios.create({
-	// baseURL: 'http://localhost:8090/',
-	baseURL: process.env.VUE_APP_URL,
+	baseURL: 'http://localhost:8090/',
+	// baseURL: process.env.VUE_APP_URL,
 	timeout: 10000,
 })
 
 // 请求拦截
 request.interceptors.request.use(
 	config => {
-		// NProgress.start()
+		NProgress.start()
 		const identification = window.localStorage.getItem('identification')
 		//identification存在，且是基于baseURL的请求
 		if (identification && !(config.url.startsWith('http://') || config.url.startsWith('https://'))) {
@@ -28,7 +28,7 @@ request.interceptors.request.use(
 // 响应拦截
 request.interceptors.response.use(
 	config => {
-		// NProgress.done()
+		NProgress.done()
 		const identification = config.headers.identification
 		if (identification) {
 			//保存身份标识到localStorage

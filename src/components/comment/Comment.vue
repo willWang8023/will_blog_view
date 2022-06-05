@@ -62,7 +62,7 @@
         if(value){
           return moment(value).format(format)
         }
-        return moment('1234567789').format('YYYY-MM-DD HH:mm:ss')
+        return moment('2022-06-05 00:00:00').format('YYYY-MM-DD HH:mm:ss')
       },
 			setReply(id) {
 				this.$store.commit(SET_PARENT_COMMENT_ID, id)

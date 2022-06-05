@@ -2,10 +2,6 @@ import axios from 'axios';
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
-console.log(process.env.NODE_ENV)
-console.log(process.env.VUE_APP_URL)
-console.log(process.env.VUE_APP_NAME)
-
 const request = axios.create({
 	baseURL: 'http://localhost:8090/',
 	// baseURL: process.env.VUE_APP_URL,

@@ -17,9 +17,11 @@
 						</div>
 						<!--中间-->
 						<div class="ten wide column">
-							<keep-alive include="Home">
-								<router-view/>
-							</keep-alive>
+              <router-view v-slot="{Component}">
+                <keep-alive include="Home">
+                  <component :is="Component"/>
+                </keep-alive>
+              </router-view>
 						</div>
 						<!--右侧-->
 						<div class="three wide column m-mobile-hide">
@@ -38,7 +40,7 @@
 
 		<!--APlayer-->
 		<div class="m-mobile-hide">
-			<MyAPlayer/>
+			<myAPlayer/>
 		</div>
 		<!--回到顶部-->
 		<el-backtop style="box-shadow: none;background: none;z-index: 9999;">

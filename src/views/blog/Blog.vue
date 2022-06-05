@@ -149,7 +149,7 @@
         if(value){
           return moment(value).format(format)
         }
-        return moment('1234567789').format(format)
+        return moment('2022-06-05 00:00:00').format(format)
       },
 			getBlog(id = this.blogId) {
 				//密码保护的文章，需要发送密码验证通过后保存在localStorage的Token

@@ -1,8 +1,7 @@
 import store from "@/store"
 
 export default function getPageTitle(pageTitle) {
-	// const title = store.state.siteInfo.webTitleSuffix
-	const title = "willWang`s blog"
+	const title = store.state.siteInfo.webTitleSuffix
 
 	if (pageTitle) {
 		if (title) {

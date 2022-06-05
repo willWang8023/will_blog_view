@@ -49,21 +49,22 @@
 	import {mapState} from 'vuex'
 	import CommentForm from "./CommentForm";
 	import {SET_PARENT_COMMENT_ID} from "@/store/mutations-types";
-  import moment from "moment";
+  import {dateFormat} from "@/util/dateTimeFormatUtils";
 
-	export default {
+  export default {
 		name: "BlogComment",
 		components: {CommentForm},
 		computed: {
 			...mapState(['allComment', 'closeComment', 'comments', 'parentCommentId'])
 		},
 		methods: {
-      dateFormat(value,format){
-        if(value){
-          return moment(value).format(format)
-        }
-        return moment('2022-06-05 00:00:00').format('YYYY-MM-DD HH:mm:ss')
-      },
+      dateFormat:dateFormat,
+      // dateFormat(value,format){
+      //   if(value){
+      //     return moment(value).format(format)
+      //   }
+      //   return moment('2022-06-05 00:00:00').format('YYYY-MM-DD HH:mm:ss')
+      // },
 			setReply(id) {
 				this.$store.commit(SET_PARENT_COMMENT_ID, id)
 			}

@@ -15,7 +15,7 @@ import 'semantic-ui-css/semantic.min.css'
 import Element from 'element-plus'
 import 'element-plus/theme-chalk/index.css'
 //moment
-// import 'util/dateTimeFormatUtils.js'
+import './util/dateTimeFormatUtils.js'
 //v-viewer
 import 'viewerjs/dist/viewer.css'
 import Viewer from 'v-viewer'

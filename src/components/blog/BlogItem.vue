@@ -54,7 +54,7 @@
 </template>
 
 <script>
-	import moment from "moment";
+  import {dateFormat} from "@/util/dateTimeFormatUtils";
 
   export default {
 		name: "blogItem",
@@ -68,12 +68,13 @@
 			toBlog(blog) {
 				this.$store.dispatch('goBlogPage', blog)
 			},
-      dateFormat(value,format){
-        if(value){
-          return moment(value).format(format)
-        }
-        return moment('2022-06-05 00:00:00').format(format)
-      }
+      dateFormat:dateFormat
+      // dateFormat(value,format){
+      //   if(value){
+      //     return moment(value).format(format)
+      //   }
+      //   return moment('2022-06-05 00:00:00').format(format)
+      // }
 		}
 	}
 </script>

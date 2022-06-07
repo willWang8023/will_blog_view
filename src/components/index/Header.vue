@@ -3,10 +3,10 @@
 		<div class="view">
 			<img ref="imgbg1" src="/index/header/bg1.jpeg" style="display: none;">
 			<div class="bg1" style="background-image: url('/index/header/bg1.jpeg');"></div>
-			<div class="bg2" style="background-image: url('/index/header/bg1.jpeg');"></div>
-			<div class="bg3" style="background-image: url('/index/header/bg1.jpeg');" v-show="loaded"></div>
+			<div class="bg2" style="background-image: url('/index/header/bg3.jpeg');"></div>
+			<div class="bg3" style="background-image: url('/index/header/bg4.jpeg');" v-show="loaded"></div>
 		</div>
-		<div class="text-malfunction" data-word="willWang's Blog">
+		<div class="text-malfunction" data-word="温故而知新可以为师矣">
 			<div class="line"></div>
 		</div>
 		<div class="wrapper">
@@ -129,7 +129,9 @@
 		top: 40%;
 		left: 49.5%;
 		transform: translate(-50%, -50%) scale(2.5);
-		width: 250px;
+		width: 171px;
+    height:70px;
+    line-height:1.1em;
 		font-size: 34px;
 		font-family: sans-serif;
 		color: transparent;
@@ -137,7 +139,7 @@
 
 	.line {
 		position: absolute;
-		width: 248px;
+		width: 171px;
 		left: -1px;
 		height: 1px;
 		background: black;
@@ -149,7 +151,7 @@
 		content: attr(data-word);
 		position: absolute;
 		top: 0;
-		height: 36px;
+		height: 66px;
 		overflow: hidden;
 		filter: contrast(200%);
 	}
@@ -173,31 +175,31 @@
 
 	@keyframes lineMove {
 		9% {
-			top: 38px;
+			top: 68px;
 		}
 		14% {
-			top: 8px;
+			top: 38px;
 		}
 		18% {
-			top: 42px;
+			top: 72px;
 		}
 		22% {
-			top: 1px;
+			top: 31px;
 		}
 		32% {
-			top: 32px;
+			top: 62px;
 		}
 		34% {
-			top: 12px;
+			top: 42px;
 		}
 		40% {
-			top: 26px;
+			top: 56px;
 		}
 		43% {
-			top: 7px;
+			top: 37px;
 		}
 		99% {
-			top: 30px;
+			top: 60px;
 		}
 	}
 
